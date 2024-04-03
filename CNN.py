@@ -1,4 +1,5 @@
-
+#version 1 of the main CNN model
+#and further changes
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -47,7 +48,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # Training the model
-for epoch in range(10):  # loop over the dataset multiple times
+for epoch in range(30):  # loop over the dataset multiple times
     running_loss = 0.0
     for i, data in enumerate(trainloader, 0):
         inputs, labels = data
